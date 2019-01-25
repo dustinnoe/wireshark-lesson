@@ -26,7 +26,15 @@ By the end of class, students will be able to:
 
 * Welcome the students to their first real dive into network packet analysis and explain that packet analysis is key to many cybersecurity functions to include malware analysis, threat hunting, and network defense. 
 
+* 
 
+* Use the slides to guide your discusion.
+
+* Explain why packet analysis is important. Explain that a packet capture is an exact replica of network traffic just as it traveled accross the wire and into the device's interface. This is key for things like troubleshooting a connection problem, discovering the source of an attack, recovering passwords or other sensitive data that is not properly protected, and forensic analysis in some computer crimes.
+
+* Explain what WireShark is. Be sure to emphasize that it is NOT just a packet capture tool, it is a complete packet analysis package. Take a moment to describe each of the features listed on the slide. Highlight how well WireShark is with displaying detailed protocol information.
+
+* Describe the process by which a network packet arrives at a computer. Be sure to explain that a network interface is a point of connection to the network. If the network trusts the system, it will communicate with it using the protcols that govern computer communication (IP,TCP,UDP,DNS,etc.).
 
 * Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
 
