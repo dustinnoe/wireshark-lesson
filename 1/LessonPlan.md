@@ -36,8 +36,12 @@ By the end of class, students will be able to:
 
 * Describe the process by which a network packet arrives at a computer. Be sure to explain that a network interface is a point of connection to the network. If the network trusts the system, it will communicate with it using the protcols that govern computer communication (IP,TCP,UDP,DNS,etc.).
 
-* Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
+* Take a moment to describe how to select one or more interfaces to capture on in WireShark. Describe how some systems will have many interfaces but with a little though it's easy to determine which to select.
+
+* One of WireShark's most powerful and useful features is filtering. Ensure you explain this to students and reiterate that it is key to successfull packet analysis with WireShark. Detail how capture filters work to only capture desired data and display filters are used to "hide" collected packets once they have already been captured. If you have some powerful filters that have served you well, now is the time to share them. If you have students in the classroom that have used Wireshark extensively, ask them to share their favorite filters.
+
+* Ask the students if they have any questions about interfaces or filters before moving on the to the guided practice.
 
 ### 2. Guided Practice: Select an Interface and Filters to Capture and Display Traffic (0:15)
 
-
+* Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
