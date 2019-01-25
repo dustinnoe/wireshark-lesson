@@ -32,7 +32,7 @@ By the end of class, students will be able to:
 
 * Explain what WireShark is. Be sure to emphasize that it is NOT just a packet capture tool, it is a complete packet analysis package. Take a moment to describe each of the features listed on the slide. Highlight how well WireShark is with displaying detailed protocol information.
 
-* Describe the process by which a network packet arrives at a computer. Be sure to explain that a network interface is a point of connection to the network. If the network trusts the system, it will communicate with it using the protcols that govern computer communication (IP,TCP,UDP,DNS,etc.).
+* Describe the process by which a network packet arrives at a computer. Be sure to explain that a network interface is a point of connection to the network. If the network trusts the system (e.g. it isn't blocked by a firewall), it will communicate with it using the protcols that govern computer communication (Ethernet,TCP,UDP,DNS,etc.).
 
 * Take a moment to describe how to select one or more interfaces to capture on in WireShark. Describe how some systems will have many interfaces but with a little though it's easy to determine which to select.
 
