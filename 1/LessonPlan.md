@@ -44,4 +44,12 @@ By the end of class, students will be able to:
 
 ### 2. Guided Practice: Select an Interface and Filters to Capture and Display Traffic (0:15)
 
+* Have students open Wireshark
+
+* Send students the following instructions.
+
+* **Instructions:**
+
+  *
+  *
 * Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
