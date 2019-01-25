@@ -26,8 +26,6 @@ By the end of class, students will be able to:
 
 * Welcome the students to their first real dive into network packet analysis and explain that packet analysis is key to many cybersecurity functions to include malware analysis, threat hunting, and network defense. 
 
-* 
-
 * Use the slides to guide your discusion.
 
 * Explain why packet analysis is important. Explain that a packet capture is an exact replica of network traffic just as it traveled accross the wire and into the device's interface. This is key for things like troubleshooting a connection problem, discovering the source of an attack, recovering passwords or other sensitive data that is not properly protected, and forensic analysis in some computer crimes.
