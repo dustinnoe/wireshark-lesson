@@ -47,21 +47,25 @@ By the end of class, students will be able to:
 * Send students the following instructions.
 
 * **Instructions:**
-  #### Select an Interface and Start Capturing
-  1. Take a look at your list of interfaces. You'll want to determine the interface that you are using to surf the web. If you already know, great!  If you don't following the test listed below. This method will work no matter which operating system you are using.
-     * Take a look at the list of interfaces in Wireshark. To the right of each listed interface there is a graph that represents the flow of packets. You are going to cause some traffic to follow and observe it here.
-     * Navigate to https://www.google.com/search?q=speed+test 
-     * Click the blue "RUN SPEED TEST" button
-     * Watch the graphs in Wireshark. You will see a spike in traffic on the interface where where the speed test is being performed. This is the interface you will select.
-  2. Click the appropriate interface to highlight it in blue.
-  3. In the main WireShark tookbar click the blue shark fin to start capturing traffic.
-  4. Next, navigate to https://www.wireshark.org/ and click a few links to generate some additional traffic on your interface.
-  5. After WireShark has been capturing packets for at least 60 seconds click the red square in WireShark's main toolbar to stop capturing packets.
+
+#### Select an Interface and Start Capturing
+
+* Take a look at your list of interfaces. You'll want to determine the interface that you are using to surf the web. If you already know, great!  If you don't following the test listed below. This method will work no matter which operating system you are using.
   
-  #### Use a Display Filter
-  So far in this guide practice session, you have captured every packet that has passed through your interface. To make sense of it, you'll want to use a few display filters. We are going to take a look at the traffic we generated while navigating to wireshark.org
+  1. Take a look at the list of interfaces in Wireshark. To the right of each listed interface there is a graph that represents the flow of packets. You are going to cause some traffic to follow and observe it here.
+  2. Navigate to https://www.google.com/search?q=speed+test 
+  3. Click the blue "RUN SPEED TEST" button
+  4. Watch the graphs in Wireshark. You will see a spike in traffic on the interface where where the speed test is being performed. This is the interface you will select
+
+* Click the appropriate interface to highlight it in blue.
+* In the main WireShark tookbar click the blue shark fin to start capturing traffic.
+* Next, navigate to https://www.wireshark.org/ and click a few links to generate some additional traffic on your interface.
+* After WireShark has been capturing packets for at least 60 seconds click the red square in WireShark's main toolbar to stop capturing packets.
   
-  a. In the display filter input box enter `dns.qry.name == "wireshark.org" && dns.flags.response==1`.
+#### Use a Display Filter
+So far in this guide practice session, you have captured every packet that has passed through your interface. To make sense of it, you'll want to use a few display filters. We are going to take a look at the traffic we generated while navigating to wireshark.org
+  
+* In the display filter input box enter `dns.qry.name == "wireshark.org" && dns.flags.response==1`.
   
   
   #### Use a Capture Filter
