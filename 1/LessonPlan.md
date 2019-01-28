@@ -28,17 +28,17 @@ By the end of class, students will be able to:
 
 * Explain why packet analysis is important. Explain that a packet capture is an exact replica of network traffic just as it traveled accross the wire and into the device's interface. This is key for things like troubleshooting a connection problem, discovering the source of an attack, recovering passwords or other sensitive data that is not properly protected, and forensic analysis in some computer crimes.
 
-* Explain what WireShark is. Be sure to emphasize that it is NOT just a packet capture tool, it is a complete packet analysis package. Take a moment to describe each of the features listed on the slide. Highlight how well WireShark is with displaying detailed protocol information.
+* Explain what WireShark is. Be sure to emphasize that it is NOT just a packet capture tool. It is a complete packet analysis package. Take a moment to describe each of the features listed on the slide. Highlight how well WireShark is with displaying detailed protocol information.
 
 * Describe the process by which a network packet arrives at a computer. Be sure to explain that a network interface is a point of connection to the network. If the network trusts the system (e.g. it isn't blocked by a firewall), it will communicate with it using the protcols that govern computer communication (Ethernet,TCP,UDP,DNS,etc.).
 
-* Take a moment to describe how to select one or more interfaces to capture on in WireShark. Describe how some systems will have many interfaces but with a little thought it's easy to determine which to select.
+* Take a moment to describe how to select one or more interfaces to capture on in WireShark. Describe how some systems will have many interfaces, but with a little thought it's easy to determine which to select.
 
-* One of WireShark's most powerful and useful features is filtering. Ensure you explain this to students and reiterate that it is key to successfull packet analysis with WireShark. Detail how capture filters work to only capture desired data and display filters are used to "hide" collected packets once they have already been captured. If you have some powerful filters that have served you well, now is the time to share them. If you have students in the classroom that have used Wireshark extensively, ask them to share their favorite filters.
+* One of WireShark's most powerful and useful features is filtering. Ensure you explain this to students and reiterate that it is key to successfull packet analysis with WireShark. Detail how capture filters work to only capture desired packets and display filters are used to "hide" collected packets once they have already been captured. If you have some powerful filters that have served you well, now is the time to share them. If you have students in the classroom that have used Wireshark extensively, ask them to share their favorite filters.
 
-* Take a moment to walk the students through the main WireShark window. Briefly explain each section. There's no need to go into great detail at this time but for the guided practice, students need to know the names of the areas in the main window.
+* Take a moment to walk students through the main WireShark window. Briefly explain each section. There's no need to go into great detail at this time, but for the guided practice students need to know the names of the areas in the main window.
 
-* Ask the students if they have any questions about interfaces or filters before moving on the to the guided practice.
+* Ask the students if they have any questions about interfaces or filters before moving on to the guided practice.
 
 ### 2. Guided Practice: Select an Interface and Filters to Capture and Display Traffic (0:15)
 
@@ -65,7 +65,7 @@ By the end of class, students will be able to:
   * After WireShark has been capturing packets for at least 60 seconds click the red square in WireShark's main toolbar to stop capturing packets.
   
   #### Use a Display Filter (0:07)
-  So far in this guide practice session, you have captured every packet that has passed through your interface. To make sense of it, you'll want to use a few display filters. We are going to take a look at the traffic we generated while navigating to wireshark.org. However, this is a bit tricky because, if you remember, https requests encrypt the host name and only the ip address is in clear text. No worries, let's use a display filter for the DNS protocol to find the ip address for wireshark.org.
+  So far in this guided practice session, you have captured every packet that has passed through your interface. To make sense of it, you'll want to use a few display filters. We are going to take a look at the traffic we generated while navigating to wireshark.org. However, this is a bit tricky because, if you remember, https requests encrypt the host name and only the ip address is in clear text. No worries, let's use a display filter for the DNS protocol to find the ip address for wireshark.org.
   
   * In the display filter input box enter `dns.qry.name == "wireshark.org" && dns.flags.response==1`. This filter looks a bit complex so lets break it down.
     * The filter to the left of the logical AND (&&) is telling WireShark to find DNS queries for wireshark.org
@@ -77,7 +77,7 @@ By the end of class, students will be able to:
   * You should now see only the communication between your computer and wireshark.org (104.25.219.21). Right-click on the first frame and select `Follow > TCP Stream`
   * Note that everything is encrypted. You can't determine anything except the host and amount of traffic. This shows how important https is when using web applications.
   
-  Congrat! You just performed a bit of packet analysis. Next, lets use a a capture filter.
+  Congrats! You just performed a bit of packet analysis. Next, let's use a capture filter.
   
   #### Use a Capture Filter (0:03)
   
@@ -86,7 +86,7 @@ By the end of class, students will be able to:
   * In the capture filter input box enter `port 53` (DNS traffic travels over port 53 by default)
   * Click the blue shark fin to start the capture.
   * Navigate to http://www.nmap.org/
-  * As soon as the site loads stop the capture by clicking the red square in the main toolbar.
+  * As soon as the site loads, stop the capture by clicking the red square in the main toolbar.
   * You should now only see DNS packets. Can you filter out the response packets for nmap.org?
   
 * **BONUS:** Did you finish early? Navigate to https://wiki.wireshark.org/CaptureFilters or https://wiki.wireshark.org/DisplayFilters and try some other interesting filters.
