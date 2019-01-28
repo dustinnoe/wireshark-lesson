@@ -89,4 +89,4 @@ By the end of class, students will be able to:
   * As soon as the site loads stop the capture by clicking the red square in the main toolbar.
   * You should now only see DNS packets. Can you filter out the response packets for nmap.org?
   
-* Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
+* ** BONUS ** Did you finish early? Navigate to https://wiki.wireshark.org/CaptureFilters or https://wiki.wireshark.org/DisplayFilters and try some other interesting filters.
