@@ -38,6 +38,8 @@ By the end of class, students will be able to:
 
 * One of WireShark's most powerful and useful features is filtering. Ensure you explain this to students and reiterate that it is key to successfull packet analysis with WireShark. Detail how capture filters work to only capture desired data and display filters are used to "hide" collected packets once they have already been captured. If you have some powerful filters that have served you well, now is the time to share them. If you have students in the classroom that have used Wireshark extensively, ask them to share their favorite filters.
 
+* Take a moment to walk the students through the main WireShark window. Briefly explain each section. There's no need to go into great detail at this time but for the guided practice, students need to know the names of the areas in the main window.
+
 * Ask the students if they have any questions about interfaces or filters before moving on the to the guided practice.
 
 ### 2. Guided Practice: Select an Interface and Filters to Capture and Display Traffic (0:15)
@@ -52,7 +54,7 @@ By the end of class, students will be able to:
 
   #### Select an Interface and Start Capturing (0:05)
 
-  * Take a look at your list of interfaces. You'll want to determine the interface that you are using to surf the web. If you already know, great!  If you don't following the test listed below. This method will work no matter which operating system you are using.
+  * Take a look at your list of interfaces. You'll want to determine the interface that you are using to surf the web. If you already know, great!  If you don't, just follow the quick test listed below to figure it out. This method will work no matter which operating system you are using.
   
     * Take a look at the list of interfaces in Wireshark. To the right of each listed interface there is a graph that represents the flow of packets. You are going to cause some traffic to follow and observe it here.
     * Navigate to https://www.google.com/search?q=speed+test 
@@ -78,5 +80,13 @@ By the end of class, students will be able to:
   * Note that everything is encrypted. You can't determine anything except the host and amount of traffic. This shows how important https is when using web applications.
   
   #### Use a Capture Filter (0:03)
+  
+  * Select `File > Close` from the menu and select `Continue without saving` to clear the current capture.
+  * Ensure the appropriate interface is still selected
+  * in the capture filter input box enter `port 53`(DNS traffic travels over port 53 by default)
+  * Click the blue shark fin to start the capture.
+  * Navigate to http://www.nmap.org/
+  * As soon as the site loads stop the capture by clicking the red square in the main toolbar.
+  * You should now only see DNS packets. Can you filter out the response packets for nmap.org?
   
 * Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
