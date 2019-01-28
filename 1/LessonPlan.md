@@ -24,17 +24,17 @@ By the end of class, students will be able to:
 
 * Welcome the students to their first real dive into network packet analysis and explain that packet analysis is key to many cybersecurity functions to include malware analysis, threat hunting, and network defense. 
 
-* Use the slides to guide your discusion.
+* Use the slides to guide your discussion.
 
-* Explain why packet analysis is important. Explain that a packet capture is an exact replica of network traffic just as it traveled accross the wire and into the device's interface. This is key for things like troubleshooting a connection problem, discovering the source of an attack, recovering passwords or other sensitive data that is not properly protected, and forensic analysis in some computer crimes.
+* Explain why packet analysis is important. Explain that a packet capture is an exact replica of network traffic just as it traveled across the wire and into the device's interface. This is key for things like troubleshooting a connection problem, discovering the source of an attack, recovering passwords or other sensitive data that is not properly protected, and forensic analysis in some computer crimes.
 
 * Explain what WireShark is. Be sure to emphasize that it is NOT just a packet capture tool. It is a complete packet analysis package. Take a moment to describe each of the features listed on the slide. Highlight how well WireShark is with displaying detailed protocol information.
 
-* Describe the process by which a network packet arrives at a computer. Be sure to explain that a network interface is a point of connection to the network. If the network trusts the system (e.g. it isn't blocked by a firewall), it will communicate with it using the protcols that govern computer communication (Ethernet,TCP,UDP,DNS,etc.).
+* Describe the process by which a network packet arrives at a computer. Be sure to explain that a network interface is a point of connection to the network. If the network trusts the system (e.g. it isn't blocked by a firewall), it will communicate with it using the protocols that govern computer communication (Ethernet,TCP,UDP,DNS,etc.).
 
 * Take a moment to describe how to select one or more interfaces to capture on in WireShark. Describe how some systems will have many interfaces, but with a little thought it's easy to determine which to select.
 
-* One of WireShark's most powerful and useful features is filtering. Ensure you explain this to students and reiterate that it is key to successfull packet analysis with WireShark. Detail how capture filters work to only capture desired packets and display filters are used to "hide" collected packets once they have already been captured. If you have some powerful filters that have served you well, now is the time to share them. If you have students in the classroom that have used Wireshark extensively, ask them to share their favorite filters.
+* One of WireShark's most powerful and useful features is filtering. Ensure you explain this to students and reiterate that it is key to successful packet analysis with WireShark. Detail how capture filters work to only capture desired packets and display filters are used to "hide" collected packets once they have already been captured. If you have some powerful filters that have served you well, now is the time to share them. If you have students in the classroom that have used Wireshark extensively, ask them to share their favorite filters.
 
 * Take a moment to walk students through the main WireShark window. Briefly explain each section. There's no need to go into great detail at this time, but for the guided practice students need to know the names of the areas in the main window.
 
@@ -44,7 +44,7 @@ By the end of class, students will be able to:
 
 * Have students open Wireshark.
 
-* Tell the students that the point of this guided practice is to learn how to capture traffic and understand the power of filters. If they do not fully understand what the filter is doing, it's okay. Weilding WireShark filters effectively takes time and research to find the filter that they'll need for a given circumstance.
+* Tell the students that the point of this guided practice is to learn how to capture traffic and understand the power of filters. If they do not fully understand what the filter is doing, it's okay. Wielding WireShark filters effectively takes time and research to find the filter that they'll need for a given circumstance.
 
 * Send students the following instructions.
 
@@ -67,11 +67,11 @@ By the end of class, students will be able to:
   #### Use a Display Filter (0:07)
   So far in this guided practice session, you have captured every packet that has passed through your interface. To make sense of it, you'll want to use a few display filters. We are going to take a look at the traffic we generated while navigating to wireshark.org. However, this is a bit tricky because, if you remember, https requests encrypt the host name and only the ip address is in clear text. No worries, let's use a display filter for the DNS protocol to find the ip address for wireshark.org.
   
-  * In the display filter input box enter `dns.qry.name == "wireshark.org" && dns.flags.response==1`. This filter looks a bit complex so lets break it down.
+  * In the display filter input box enter `dns.qry.name == "wireshark.org" && dns.flags.response==1`. This filter looks a bit complex so let's break it down.
     * The filter to the left of the logical AND (&&) is telling WireShark to find DNS queries for wireshark.org
     * The filter to the right of the logical AND is telling WireShark to only display DNS responses.
     * The end result is DNS responses for wireshark.org
-  * WireShark places DNS responses in the Info field of the packet list pane for convienence. We can see the ip address for wireshark.org is 104.25.219.21
+  * WireShark places DNS responses in the Info field of the packet list pane for convenience. We can see the ip address for wireshark.org is 104.25.219.21
   * Click the X on the right side of the display filter box to clear the current filter.
   * Enter the following filter and press enter. `ip.addr == 104.25.219.21`
   * You should now see only the communication between your computer and wireshark.org (104.25.219.21). Right-click on the first frame and select `Follow > TCP Stream`
