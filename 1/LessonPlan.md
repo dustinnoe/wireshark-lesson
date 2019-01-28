@@ -47,12 +47,15 @@ By the end of class, students will be able to:
 * Send students the following instructions.
 
 * **Instructions:**
-
-  * Take a look at your list of interfaces. You'll want to determine the interface that you are using to surf the web. If you already know, great!  If you don't following the test listed below. This method will work no matter which operating system you are using.
-     * Take a look at the list of interfaces in Wireshark. To the right of each listed interface there is a graph that represents the flow of packets. You are going to cause some traffic to follow and observe it here.
-     * Navigate to https://www.google.com/search?q=speed+test 
-     * Click the blue "RUN SPEED TEST" button
-     * Watch the graphs in Wireshark. You will see a spike in traffic on the interface where where the speed test is being performed. This is the interface you will select.
-  * Click the appropriate interface to highlight it in blue.
+  #### Select an Interface and Start Capturing
+  a. Take a look at your list of interfaces. You'll want to determine the interface that you are using to surf the web. If you already know, great!  If you don't following the test listed below. This method will work no matter which operating system you are using.
+     1. Take a look at the list of interfaces in Wireshark. To the right of each listed interface there is a graph that represents the flow of packets. You are going to cause some traffic to follow and observe it here.
+     2. Navigate to https://www.google.com/search?q=speed+test 
+     3. Click the blue "RUN SPEED TEST" button
+     4. Watch the graphs in Wireshark. You will see a spike in traffic on the interface where where the speed test is being performed. This is the interface you will select.
+     
+  b. Click the appropriate interface to highlight it in blue.
+  c. In the main WireShark tookbar click the blue shark fin to start capturing traffic.
   
+  d. Next,
 * Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
