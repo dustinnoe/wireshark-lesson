@@ -48,25 +48,32 @@ By the end of class, students will be able to:
 
 * **Instructions:**
 
-#### Select an Interface and Start Capturing
+  #### Select an Interface and Start Capturing
 
-* Take a look at your list of interfaces. You'll want to determine the interface that you are using to surf the web. If you already know, great!  If you don't following the test listed below. This method will work no matter which operating system you are using.
+  * Take a look at your list of interfaces. You'll want to determine the interface that you are using to surf the web. If you already know, great!  If you don't following the test listed below. This method will work no matter which operating system you are using.
   
-  1. Take a look at the list of interfaces in Wireshark. To the right of each listed interface there is a graph that represents the flow of packets. You are going to cause some traffic to follow and observe it here.
-  2. Navigate to https://www.google.com/search?q=speed+test 
-  3. Click the blue "RUN SPEED TEST" button
-  4. Watch the graphs in Wireshark. You will see a spike in traffic on the interface where where the speed test is being performed. This is the interface you will select
+    * Take a look at the list of interfaces in Wireshark. To the right of each listed interface there is a graph that represents the flow of packets. You are going to cause some traffic to follow and observe it here.
+    * Navigate to https://www.google.com/search?q=speed+test 
+    * Click the blue "RUN SPEED TEST" button
+    * Watch the graphs in Wireshark. You will see a spike in traffic on the interface where where the speed test is being performed. This is the interface you will select
 
-* Click the appropriate interface to highlight it in blue.
-* In the main WireShark tookbar click the blue shark fin to start capturing traffic.
-* Next, navigate to https://www.wireshark.org/ and click a few links to generate some additional traffic on your interface.
-* After WireShark has been capturing packets for at least 60 seconds click the red square in WireShark's main toolbar to stop capturing packets.
+  * Click the appropriate interface to highlight it in blue.
+  * In the main WireShark tookbar click the blue shark fin to start capturing traffic.
+  * Next, navigate to https://www.wireshark.org/ and click a few links to generate some additional traffic on your interface.
+  * After WireShark has been capturing packets for at least 60 seconds click the red square in WireShark's main toolbar to stop capturing packets.
   
-#### Use a Display Filter
-So far in this guide practice session, you have captured every packet that has passed through your interface. To make sense of it, you'll want to use a few display filters. We are going to take a look at the traffic we generated while navigating to wireshark.org
+  #### Use a Display Filter
+  So far in this guide practice session, you have captured every packet that has passed through your interface. To make sense of it, you'll want to use a few display filters. We are going to take a look at the traffic we generated while navigating to wireshark.org. However, this is a bit tricky because, if you remember, https requests encrypt the host name and only the ip address is in clear text. No worries, let's use a display filter for the DNS protocol to find the ip address for wireshark.org.
   
-* In the display filter input box enter `dns.qry.name == "wireshark.org" && dns.flags.response==1`.
-  
+  * In the display filter input box enter `dns.qry.name == "wireshark.org" && dns.flags.response==1`.
+    * The filter to the left of the logical AND (&&) is telling WireShark to find DNS queries for wireshark.org
+    * The filter to the right of the logical AND is telling WireShark to only display DNS responses.
+    * The end result is DNS responses for wireshark.org
+  * WireShark places DNS responses in the Info field for convienence and we can see the ip address for wireshark.org is 104.25.219.21
+  * Click the X on the right side of the display filter box to clear the current filter.
+  * Enter the following filter and press enter. `ip.addr == 104.25.219.21`
+  * You should now see only the communication between your computer and wireshark.org. Right-click on the first frame and select `Follow > TCP Stream`
+  * Note that everything is encrypted. You can't determine anything except the host and amount of traffic. This shows how important https is when using web applications.
   
   #### Use a Capture Filter
 * Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
