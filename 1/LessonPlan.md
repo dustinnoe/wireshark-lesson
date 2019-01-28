@@ -56,6 +56,14 @@ By the end of class, students will be able to:
      
   b. Click the appropriate interface to highlight it in blue.
   c. In the main WireShark tookbar click the blue shark fin to start capturing traffic.
+  d. Next, navigate to https://www.wireshark.org/ and click a few links to generate some additional traffic on your interface.
+  e. After WireShark has been capturing packets for at least 60 seconds click the red square in WireShark's main toolbar to stop capturing packets.
   
-  d. Next,
+  #### Use a Display Filter
+  So far in this guide practice session, you have captured every packet that has passed through your interface. To make sense of it, you'll want to use a few display filters. We are going to take a look at the traffic we generated while navigating to wireshark.org
+  
+  a. In the display filter input box enter `dns.qry.name == "wireshark.org" && dns.flags.response==1`.
+  
+  
+  #### Use a Capture Filter
 * Let the class know that, by the end of the week the will be able to confidently capture and analyze traffic on the network they are responisble for.
